@@ -1,0 +1,65 @@
+# vim: set noexpandtab ts=4:
+[alias]
+	st = status
+	br = branch
+	co = checkout
+     lol = log --graph --decorate --pretty=oneline --abbrev-commit
+     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%ae>%Creset' --abbrev-commit --date=relative
+     dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(bold blue)\"%cn\" <%ce>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+     lp = log -p -c
+     wc = whatchanged -m --name-status
+     cam = commit -am
+     last = cat-file commit HEAD
+     l = "log --pretty=format:'%h %ad  %s%x09%ae' --date=short"
+     # In case autosetuprebase was not on
+     sync = pull --rebase
+     unadd = reset HEAD
+     uncommit = git reset --soft HEAD@{1}
+[user]
+	email = cdunn2001@gmail.com
+	name = Christopher Dunn
+[push]
+	default = upstream
+[core]
+     # Requires LESS=R..., e.g. LESS=eiRX
+     pager = less
+	whitespace = trailing-space,space-before-tab
+     #excludesfile = ~/.config/git/ignore
+     # tabs?
+     #whitespace = cr-at-eol,tab-in-indent,trailing-space,space-before-tab
+     whitespace = trailing-space,space-before-tab
+     autocrlf = input #Linux, if binaries are safe
+     #autocrlf = true #Windows
+     #autocrlf = false #safest
+     sharedRepository = umask
+[apply]
+	whitespace = fix
+[color]
+     ui = auto
+[commit]
+     #template = 'file'
+[format]
+     # What does this do?
+     #pretty = oneline
+[push]
+     default = upstream
+[branch]
+     autosetuprebase = remote
+     # asr makes this moot, but just in case
+     autosetupmerge = false
+[log]
+     date = local
+[blame]
+     date = short
+[github]
+     user = cdunn2001
+[diff]
+     noprefix = true # causes problems for format-patch
+     #external = /home/chrisdun/bin/extDiff
+[rerere]
+     enabled = true
+[rebase]
+     autosquash = true
+[help]
+     autocorrect = 1

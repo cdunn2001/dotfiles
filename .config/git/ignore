@@ -1,0 +1,30 @@
+# Exclude some Java stuff.
+.project
+.classpath
+.p4config
+*.class
+#/bin/
+/eclipse-bin/
+.metadata/
+.settings/
+
+# python
+*.pyc
+*.pyo
+__pycache__/
+.ropeproject/
+
+# C
+*.o
+*.exe
+
+# Exclude back-ups.
+*~
+*#
+.#*
+.swp
+
+# random
+*.i.d
+o
+out
