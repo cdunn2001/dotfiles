@@ -10,6 +10,7 @@ export PYTHONRC=~/.pythonrc
 export EDITOR=vim
 
 source ~/.alias.sh
-PS1="\w\033[32m\]:\$(git_current_branch)\033[0m\]\n$ "
+#PS1="\w\033[32m\]:\$(git_current_branch)\033[0m\]\n$ "
+PS1="\W\[\033[32m\]\]:\$(git_current_branch)\[\033[0m\]\]$ "
 
 source ~/scripts/git-completion.bash
