@@ -24,6 +24,9 @@ __pycache__/
 .#*
 .swp
 
+# Mac
+.DS_Store
+
 # random
 *.i.d
 o
