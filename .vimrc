@@ -1,5 +1,5 @@
 set modelines=1
-set list                " Show invisible whitespace
+"set list                " Show invisible whitespace
 " To see \r as ^M, re-open in unix mode via
 "   :e ++ff=unix
 " This does not seem to work:
