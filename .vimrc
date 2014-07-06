@@ -1,3 +1,11 @@
+"filetype plugin on
+" Better:
+" https://github.com/tpope/vim-pathogen
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+"""
+
 set modelines=1
 set autoindent
 
@@ -59,8 +67,6 @@ autocmd FileType gitconfig setl noexpandtab ts=4 sw=4 autocmd FileType ruby setl
 
 :au BufWinEnter * checktime
 " http://stackoverflow.com/questions/923737/detect-file-change-offer-to-reload-file
-
-"filetype plugin on
 
 " automatic reload .vimrc on change
 autocmd! bufwritepost .vimrc source %
