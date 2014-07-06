@@ -1,4 +1,6 @@
 set modelines=1
+set autoindent
+
 "set list                " Show invisible whitespace
 " To see \r as ^M, re-open in unix mode via
 "   :e ++ff=unix
