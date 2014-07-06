@@ -71,7 +71,12 @@ autocmd FileType gitconfig setl noexpandtab ts=4 sw=4 autocmd FileType ruby setl
 " automatic reload .vimrc on change
 autocmd! bufwritepost .vimrc source %
 
-"colorscheme pablo
+" allow changing buffer without saving
+set hidden
+set confirm
+
+" Nice idea from Sky!
+colorscheme pablo
 
 " For tmux background color problems
 " Unfortunately, it seems to wreck colors completely.
