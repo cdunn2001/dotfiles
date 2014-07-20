@@ -8,7 +8,8 @@ export LESS=-eiRSXM
 export RI="--format ansi"
 export PYTHONRC=~/.pythonrc
 export EDITOR=vim
-export HISTCONTROL=ignoredups
+#export HISTCONTROL=ignoredups
+export HISTCONTROL=ignoreboth:erasedups
 
 source ~/.alias.sh
 #PS1="\w\033[32m\]:\$(git_current_branch)\033[0m\]\n$ "
