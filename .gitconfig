@@ -8,7 +8,8 @@
      lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%ae>%Creset' --abbrev-commit --date=relative
      dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(bold blue)\"%cn\" <%ce>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
      lp = log -p -c
-     wc = whatchanged -m --name-status
+	 #wc = whatchanged -m --name-status
+	wc = log --stat
      cam = commit -am
      last = cat-file commit HEAD
      l = "log --pretty=format:'%h %ad  %s%x09%ae' --date=short"
