@@ -1,6 +1,7 @@
 # vim: set noexpandtab ts=4:
 [alias]
-	st = status
+	stat = status
+	st = status -uno
 	br = branch
 	co = checkout
      lol = log --graph --decorate --pretty=oneline --abbrev-commit

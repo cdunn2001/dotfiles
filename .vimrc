@@ -68,7 +68,7 @@ set nu
 autocmd FileType gitconfig setl noexpandtab ts=4 sw=4
 autocmd FileType ruby setl expandtab ts=2 sw=2 tw=80
 autocmd FileType python setl expandtab ts=4 sts=4 sw=4 tw=80
-"autocmd FileType cpp setl expandtab ts=2 sts=2 sw=2 tw=0
+autocmd FileType cpp setl expandtab ts=2 sts=2 sw=2 tw=0
 autocmd FileType java setl expandtab ts=4 sw=4 tw=80
 autocmd FileType makefile setl noexpandtab
 

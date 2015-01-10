@@ -8,7 +8,7 @@ export LESS=-eiRSXM
 export RI="--format ansi"
 export PYTHONRC=~/.pythonrc
 export EDITOR=vim
-#export HISTCONTROL=ignoredups
+export HISTCONTROL=erasedups
 export HISTFILESIZE=100000
 shopt -s histappend
 
