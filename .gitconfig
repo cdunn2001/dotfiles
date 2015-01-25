@@ -24,49 +24,49 @@
 [push]
 	default = upstream
 [core]
-     # Requires LESS=R..., e.g. LESS=eiRX
-     pager = less
+	# Requires LESS=R..., e.g. LESS=eiRX
+	pager = less
 	whitespace = trailing-space,space-before-tab
-     #excludesfile = ~/.config/git/ignore
-     # tabs?
-     #whitespace = cr-at-eol,tab-in-indent,trailing-space,space-before-tab
-     whitespace = trailing-space,space-before-tab
-     autocrlf = input #Linux, if binaries are safe
-     #autocrlf = true #Windows
-     #autocrlf = false #safest
-     sharedRepository = umask
+	#excludesfile = ~/.config/git/ignore
+	# tabs?
+	#whitespace = cr-at-eol,tab-in-indent,trailing-space,space-before-tab
+	whitespace = trailing-space,space-before-tab
+	autocrlf = input #Linux, if binaries are safe
+	#autocrlf = true #Windows
+	#autocrlf = false #safest
+	sharedRepository = umask
 [apply]
 	whitespace = fix
 [color]
-     ui = auto
+	ui = auto
 [commit]
-     #template = 'file'
+	#template = 'file'
 [format]
-     # What does this do?
-     #pretty = oneline
+	# What does this do?
+	#pretty = oneline
 [push]
-     default = upstream
+	default = upstream
 [branch]
-     autosetuprebase = remote
-     # asr makes this moot, but just in case
-     autosetupmerge = false
+	autosetuprebase = remote
+	# asr makes this moot, but just in case
+	autosetupmerge = false
 [merge]
 	defaultToUpstream = true
 [log]
-     date = local
+	date = local
 [blame]
-     date = short
+	date = short
 [github]
-     user = cdunn2001
+	user = cdunn2001
 [diff]
-     noprefix = true # causes problems for format-patch
-     #external = /home/chrisdun/bin/extDiff
+	noprefix = true # causes problems for format-patch
+	#external = /home/chrisdun/bin/extDiff
 [rerere]
-     enabled = true
+	enabled = true
 [rebase]
-     autosquash = true
+	autosquash = true
 [help]
-     autocorrect = 1
+	autocorrect = 1
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
