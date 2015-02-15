@@ -2,6 +2,7 @@
 "filetype plugin on
 " Better:
 " https://github.com/tpope/vim-pathogen
+
 execute pathogen#infect()
 filetype off
 syntax on
@@ -64,6 +65,8 @@ augroup resCur
 augroup END
 
 set nu
+
+au BufRead,BufNewFile *.nim set filetype=nim
 
 autocmd FileType gitconfig setl noexpandtab ts=4 sw=4
 autocmd FileType ruby setl expandtab ts=2 sw=2 tw=80
