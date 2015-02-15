@@ -39,6 +39,7 @@
 	whitespace = fix
 [color]
 	ui = auto
+	interactive = always
 [commit]
 	#template = 'file'
 [format]
