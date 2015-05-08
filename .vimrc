@@ -1,16 +1,42 @@
-"""
-"filetype plugin on
-" Better:
-" https://github.com/tpope/vim-pathogen
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-execute pathogen#infect()
-filetype off
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
 syntax on
-filetype plugin indent on
-"""
+" and to see trailing ws
+highlight ExtraWhitespace ctermbg=red guibg=gray "autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red match ExtraWhitespace /\t/
 
 set modeline
 set autoindent
+set nu
+set noignorecase
+set smartcase
+set textwidth=0         " Don't wrap words by default (ninjas use 80)
 
 "set list                " Show invisible whitespace
 " To see \r as ^M, re-open in unix mode via
@@ -32,12 +58,6 @@ autocmd BufWinEnter *akefile silent loadview "autocmd BufWinLeave * mkview "auto
 "set shell=/bin/bash\ --rcfile\ ${HOME}/.bashrc " Nor these:
 "set shellcmdflag=-i
 "set shellcmdflag=-ic
-
-set noignorecase
-set smartcase
-set textwidth=0         " Don't wrap words by default (ninjas use 80)
-
-highlight ExtraWhitespace ctermbg=red guibg=gray "autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red match ExtraWhitespace /\t/
 
 " show last column
 "set colorcolumn=80
@@ -64,8 +84,6 @@ augroup resCur
   autocmd BufWinEnter * call ResCur()
 augroup END
 
-set nu
-
 au BufRead,BufNewFile *.nim set filetype=nim
 
 autocmd FileType gitconfig setl noexpandtab ts=4 sw=4
@@ -74,6 +92,7 @@ autocmd FileType python setl expandtab ts=4 sts=4 sw=4 tw=80
 autocmd FileType cpp setl expandtab ts=2 sts=2 sw=2 tw=0
 autocmd FileType java setl expandtab ts=4 sw=4 tw=80
 autocmd FileType makefile setl noexpandtab
+autocmd FileType nim setl expandtab ts=2 sw=2 tw=80
 
 " Go
 autocmd FileType go compiler go
@@ -89,8 +108,8 @@ autocmd! bufwritepost .vimrc source %
 set hidden
 set confirm
 
-" Nice idea from Sky!
-colorscheme pablo
+" Nice idea from Sky! " But where is it?
+""colorscheme pablo
 
 " For tmux background color problems
 " Unfortunately, it seems to wreck colors completely.
@@ -98,7 +117,7 @@ colorscheme pablo
 
 " Let :%y+ copy to clipboard.
 " To paste -- "+p
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " same as :set paste
 set pastetoggle=<F2>
